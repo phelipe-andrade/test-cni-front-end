@@ -1,0 +1,34 @@
+<div class="content" *ngIf="vehicle">
+  <h1 class="h1">Detalhes do veículo</h1>
+  <div class="general" >
+    <div class="img">
+      <img src="{{apiUrl}}/images/{{vehicle.img}}" alt={{vehicle.model}}>
+    </div>
+    <div class="info">
+      <h2>{{vehicle.model}}</h2>
+      <span>id: {{vehicle._id}}</span>
+      <ul>
+        <li>Marca: <span>{{vehicle.brand}}</span></li>
+        <li>Ano: <span>{{vehicle.age}}</span></li>
+        <li>Valor: <span>{{vehicle.value | currency}}</span></li>
+      </ul>
+      <div class="actions">
+        <button class="btn delete" (click)="removeVehicle(vehicle)">
+          <fa-icon [icon]="faRemove"></fa-icon>
+          DELETAR
+        </button>
+        <a routerLink="/list/edit/{{vehicle._id}}">
+          <button class="btn edit">
+            <fa-icon [icon]="faEdit"></fa-icon>
+            Editar
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="description">
+    <h3 class="h1">Descrição</h3>
+    <p>{{vehicle.description}}</p>
+  </div>
+</div>
+

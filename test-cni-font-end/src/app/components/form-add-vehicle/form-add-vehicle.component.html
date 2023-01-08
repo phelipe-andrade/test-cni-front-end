@@ -1,0 +1,54 @@
+<form (ngSubmit)="addVehicle()" [formGroup]="vehicleForm" #formDir="ngForm">
+  <div>
+    <input  type="file" accept="image/*" id="image"
+    (change)="onFileSelected($event)"
+    />
+    <label for="image">Adicionar imagem</label>
+    <div *ngIf=" !haveImage && formDir.submitted" class="validation-error">
+      <p>A imagem é obrigatória.</p>
+    </div>
+  </div>
+
+  <div>
+    <input type="text" id="model" placeholder="Ex: Gol"  formControlName="model">
+    <label for="model">Modelo</label>
+    <div *ngIf=" model.invalid && formDir.submitted" class="validation-error">
+      <p *ngIf="model.errors?.['required']">O modelo é obrigatório.</p>
+    </div>
+  </div>
+
+  <div>
+    <input type="text" id="brand" placeholder="Ex: Volkswagem" formControlName="brand">
+    <label for="brand">Marca</label>
+    <div *ngIf=" brand.invalid && formDir.submitted" class="validation-error">
+      <p *ngIf="brand.errors?.['required']">A marca é obrigatória.</p>
+    </div>
+  </div>
+
+  <div>
+    <input type="text" id="age" placeholder="Ex: 2010"  formControlName="age">
+    <label for="age">Ano</label>
+    <div *ngIf=" age.invalid && formDir.submitted" class="validation-error">
+      <p *ngIf="age.errors?.['required']">O ano é obrigatório.</p>
+    </div>
+  </div>
+
+  <div>
+    <input type="text" id="value" placeholder="Ex: R$ 15.000,00"  formControlName="value">
+    <label for="value">Valor</label>
+    <div *ngIf=" value.invalid && formDir.submitted" class="validation-error">
+      <p *ngIf="value.errors?.['required']">O valor é obrigatório.</p>
+    </div>
+  </div>
+
+  <div>
+    <textarea cols="20" rows="4" type="text" id="description" placeholder="Ex: Veículo seminovo, não possui nenhum arranhado na lataria."
+    formControlName="description"></textarea>
+    <label for="description">Descrição</label>
+    <div *ngIf="description.invalid && formDir.submitted" class="validation-error">
+      <p *ngIf="description.errors?.['required']">A descrição é obrigatória.</p>
+    </div>
+  </div>
+
+  <input class="btn" type="submit" [value]="btnText ? btnText :'Adicionar'"/>
+</form>

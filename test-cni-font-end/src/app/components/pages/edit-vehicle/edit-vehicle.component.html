@@ -1,0 +1,16 @@
+<div class="content" *ngIf="vehicle">
+    <h1 class="h1">Editando o veículo <span>{{vehicle.model}}</span></h1>
+    <div class="wrapper">
+      <div class="preview">
+        <img *ngIf="!newImage; else image" src="{{apiUrl}}/images/{{vehicle.img}}" alt="preview">
+        <ng-template #image><img [src]="setImage" alt="preview"></ng-template>
+      </div>
+      <app-form-add-vehicle
+      [vehicleData]="vehicle"
+      [btnText]="btnText"
+      (changeImage)="onChangeImage($event)"
+      (onSubmit)="editVehicle($event)"
+      ></app-form-add-vehicle>
+    </div>
+
+</div>

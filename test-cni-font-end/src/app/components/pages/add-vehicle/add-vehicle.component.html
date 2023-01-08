@@ -1,0 +1,14 @@
+<div class="content">
+  <h1 class="h1">Adicionar veículo</h1>
+  <div class="wrapper">
+    <div class="preview">
+      <img *ngIf="previewImage; else noImage" [src]="previewImage" alt="preview">
+      <ng-template #noImage>Nenhuma imagem adicionada</ng-template>
+    </div>
+    <app-form-add-vehicle
+    (changeImage)="onChangeImage($event)"
+    (onSubmit)="addVehicle($event)"
+    ></app-form-add-vehicle>
+  </div>
+
+</div>

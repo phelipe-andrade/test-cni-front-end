@@ -1,0 +1,35 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+.preview {
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* form {
+  display: grid;
+  position: relative;
+}
+
+form div {
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+}
+
+form div:nth-child(1) {
+  margin-top: 0;
+} */
+
+

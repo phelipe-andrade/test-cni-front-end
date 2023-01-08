@@ -1,0 +1,23 @@
+.title {
+  text-align: center;
+}
+
+.title p {
+  font-size: 1rem;
+}
+
+.title h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.title button {
+
+  width: 120px;
+}
+
+.title a:nth-child(1) {
+  margin-right: 15px;
+}
+
+
