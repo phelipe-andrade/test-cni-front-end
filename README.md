@@ -7,7 +7,7 @@ Porjeto desenvolvido em Angular
 * Para uma experiência e desenvolvimento completo, foi desenvolvido juntamente com o front-end, uma API
 baseada em Node.js/Espress.js. Utilizada para fazer a ligação com o Banco de Dados.
 
-* As urls dentro do arquivo do front-end como na API, não foram colocados fora do arquivo **.env** 
+* As urls dentro do arquivo do front-end como na API, não foram colocados na pasta **.env** 
 para facilitar no momento da análise do teste.
 
 ## 🚀 Iniciando o teste
@@ -24,9 +24,13 @@ npm i
 npm run start
 ```
 
-* 
+* Faça a instalação das dependências do teste  na pasta do **test-cni-front-end** com:
 
-* Em seguida faça o seguinte comando na pasta do **test-cni-front-end** para inicial o teste: 
+```
+npm i
+```
+
+* Em seguida faça o seguinte comando para inicial o teste: 
 ```
 npm run start
 ```
