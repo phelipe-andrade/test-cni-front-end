@@ -26,7 +26,7 @@
   </div>
 
   <div>
-    <input type="text" id="age" placeholder="Ex: 2010"  formControlName="age">
+    <input type="number" id="age" placeholder="Ex: 2010"  formControlName="age">
     <label for="age">Ano</label>
     <div *ngIf=" age.invalid && formDir.submitted" class="validation-error">
       <p *ngIf="age.errors?.['required']">O ano é obrigatório.</p>
@@ -34,7 +34,7 @@
   </div>
 
   <div>
-    <input type="text" id="value" placeholder="Ex: R$ 15.000,00"  formControlName="value">
+    <input type="number" id="value" placeholder="Ex: 150000"  formControlName="value">
     <label for="value">Valor</label>
     <div *ngIf=" value.invalid && formDir.submitted" class="validation-error">
       <p *ngIf="value.errors?.['required']">O valor é obrigatório.</p>
